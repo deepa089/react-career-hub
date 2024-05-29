@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from './components/Root/Root.jsx';
+import Home from './components/Home/Home.jsx';
 
 const router = createBrowserRouter([
   {
       path: "/",
-      element: <div>Root Element</div>,
-      // errorElement: <ErrorPage></ErrorPage>,
+      element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
           {
               path: "/",
-              element: <div>This is Root Element</div>,
+              element: <Home></Home>,
           },
           //   {
           //     path: "/donations",
