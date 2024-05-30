@@ -1,9 +1,7 @@
-import React from 'react';
-
 const ErrorPage = () => {
     return (
         <div>
-            <><H1>Oooops!! </H1></>
+           <h1>Oops!!</h1>
         </div>
     );
 };
