@@ -7,13 +7,24 @@ import calendar from '../../assets/icons/calendar.png';
 import phone from '../../assets/icons/phone.png';
 import money from '../../assets/icons/money.png';
 import email from '../../assets/icons/email.png';
+import { ToastContainer, toast } from 'react-toastify';
+
+
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from '../../Utility/localStorage';
 
 const JobDetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
-    const jobDetail = jobs.find(job => job.id == id)
+    const idInt = parseInt(id)
+    const jobDetail = jobs.find(job => job.id == idInt)
     console.log(jobs, id);
     console.log(jobDetail);
+
+    const handleApplyNow = () => {
+        saveJobApplication(idInt);
+        toast("Applied Successfully");
+    } 
     return (
         <div>
             <h2 > Job Details</h2>
@@ -69,10 +80,11 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <Link className="btn border-[#9873FF] bg-[#9873FF] text-white w-full">Apply Now</Link>
+                        <Link className="btn border-[#9873FF] bg-[#9873FF] text-white w-full" onClick={handleApplyNow}>Apply Now</Link>
                     </div>
-                </div>
 
+                </div>
+                <ToastContainer />
 
             </div>
 
