@@ -1,15 +1,20 @@
 import { useLoaderData } from 'react-router-dom';
 import FeatureJob from '../FeatureJob/FeatureJob';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const FeatureJobs = () => {
-    const jobs = useLoaderData();
+    // const jobs = useLoaderData();
+    const [jobs, setJobs] = useState([]);
     const [dataLength, setDataLength] = useState(4);
     // const handleShowAllBtn = (dataLength) => {
     //     setDataLength(dataLength);
     // }
-    console.log(dataLength);
-    console.log(jobs.length);
+
+    useEffect(()=>{
+        fetch('jobs.json')
+        .then(res=> res.json())
+        .then(data=> setJobs(data));
+    },[])
     return (
         <div className='text-center'>
             <h2 className='text-3xl font-semibold'>Feature Jobs {jobs.length}</h2>

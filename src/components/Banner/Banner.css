@@ -1,0 +1,6 @@
+.bannerImg{
+    background-image: url('/src/assets/images/user.png');
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+}
