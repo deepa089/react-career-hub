@@ -102,7 +102,7 @@ const JobDetails = () => {
                     </div>
 
                 </div>
-                <ToastContainer />
+                <ToastContainer></ToastContainer>
 
             </div>
 
