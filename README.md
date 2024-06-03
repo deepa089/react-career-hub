@@ -77,3 +77,13 @@ https://fkhadra.github.io/react-toastify/installation/
 npm install --save react-toastify
 
 
+
+# build project command netlify
+npm install -g serve
+npm run build
+
+# netlify when page on found for refreshing
+ >> 1. in dist floder >> create file named '_redirects'
+ >> 2. write this code in that file 
+ /*  /index.html  200
+
