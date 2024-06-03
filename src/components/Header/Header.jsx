@@ -11,7 +11,7 @@ const Header = () => {
             <li><NavLink to="/blog">Blogs</NavLink></li>
         </>
     return (
-        <div className="navbar bg-slate-100 mx-36">
+        <div className="navbar bg-slate-100">
             {/* <div className="bg-slate-100"> */}
                 <div className="navbar-start w-96">
                     <div className="dropdown">

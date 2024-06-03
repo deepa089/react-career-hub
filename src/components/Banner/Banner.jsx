@@ -2,7 +2,7 @@ import bannerImg from '../../assets/images/user.png'
 
 const Banner = () => {
     return (
-        <div className='flex bg-slate-100'>
+        <div className='flex'>
             <div className='w-1/3'>
                 <div className='text-6xl font-extrabold'>
                     <h1>One Step </h1>

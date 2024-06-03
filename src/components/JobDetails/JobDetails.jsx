@@ -15,25 +15,43 @@ import { saveJobApplication } from '../../Utility/localStorage';
 
 const JobDetails = () => {
     const jobs = useLoaderData();
+    // const [jobs, setJobs] = useState([]);
     const { id } = useParams();
     const idInt = parseInt(id)
     const jobDetail = jobs.find(job => job.id == idInt)
     console.log(jobs, id);
     console.log(jobDetail);
 
+    // useEffect(()=>{
+    //     fetch('jobs.json')
+    //     .then(res=> res.json())
+    //     .then(data=> setJobs(data));
+    // },[])
+
     const handleApplyNow = () => {
         saveJobApplication(idInt);
         toast("Applied Successfully");
-    } 
+    }
     return (
         <div>
-            <h2 > Job Details</h2>
             <div id='jobDetailsHeader'>
+                <div className="bg-slate-100 flex static ">
+                    <div className='bottom-0 left-0 pt-16'>
+                        <img className='w-72 h-52' src='/src/assets/images/bg1.png'></img>
+                    </div>
+                    <div className='absolute top-0 right-0'>
+                        <img className='w-52 h-36' src='/src/assets/images/bg2.png'></img>
+                    </div>
+                    <div className='w-3/5 place-content-center'>
+                        <h2 className='text-center text-3xl font-semibold'> Job Details</h2>
+                    </div>
+                </div>
+
             </div>
-            <div className='grid grid-cols-3 gap-4 my-4'>
+            <div className='grid grid-cols-3 gap-4 my-28 px-36'>
                 <div className='col-span-2'>
                     <div>
-                        <span className='font-bold'>Description : </span> {jobDetail.job_description}
+                        <span className='font-bold'>Job Description : </span> {jobDetail.job_description}
                     </div>
                     <br />
                     <div>

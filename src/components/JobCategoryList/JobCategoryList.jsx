@@ -10,8 +10,8 @@ const JobCategoryList = () => {
         .then(data=>setJobCatList(data));
     } , [])
     return (
-        <div>
-            <h2>Job Category List {jobsCategoryList.length}</h2>
+        <div className='text-center bg-slate-50'>
+            <h2 className='text-3xl font-semibold'>Job Category List {jobsCategoryList.length}</h2>
         </div>
     );
 };

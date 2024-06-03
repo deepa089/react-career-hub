@@ -6,9 +6,12 @@ import Header from '../Header/Header';
 const Root = () => {
     return (
         <div>
-            <Header></Header>
-            <div className='px-32 ml-4'>
-            <Outlet> </Outlet>
+
+            <div className="bg-slate-100 px-36">
+                <Header></Header>
+            </div>
+            <div>
+                <Outlet> </Outlet>
             </div>
             <Footer></Footer>
         </div>

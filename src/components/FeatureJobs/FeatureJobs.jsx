@@ -16,7 +16,7 @@ const FeatureJobs = () => {
         .then(data=> setJobs(data));
     },[])
     return (
-        <div className='text-center'>
+        <div className='text-center bg-slate-50'>
             <h2 className='text-3xl font-semibold'>Feature Jobs {jobs.length}</h2>
             <p className='pb-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='grid grid-cols-2 gap-4'>

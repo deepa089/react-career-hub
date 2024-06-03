@@ -6,9 +6,13 @@ import FeatureJobs from '../FeatureJobs/FeatureJobs';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
-            <JobCategoryList></JobCategoryList>
-            <FeatureJobs></FeatureJobs>
+            <div className='px-36  bg-slate-100'>
+                <Banner></Banner>
+            </div>
+            <div className='px-36'>
+                <JobCategoryList></JobCategoryList>
+                <FeatureJobs></FeatureJobs>
+            </div>
         </div>
     );
 };

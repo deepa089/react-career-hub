@@ -1,4 +1,3 @@
-
 # rakib sandbox-css
 ----------------------------------
 https://krhasan.github.io/sandbox-CSS/page-image.html
@@ -7,9 +6,12 @@ https://krhasan.github.io/sandbox-CSS/page-image.html
 ----------------------------------
 https://sandbox-react-documents.web.app/front-end-with-react
 
+# Rakib Github
+ https://github.com/krHasan?tab=repositories
+
 # Create React Project
 ---------------------------
-npm create vite@latest my-vue-app -- --template vue
+npm create vite@latest my-vue-app -- --template react
 
 # react shortcut jsc file write :
 ------------------------------------
@@ -44,6 +46,9 @@ npm install react-icons --save
 # install chart
 ---------------
 npm install recharts
+
+# install vite only 
+npm i vite
 
 # to see many chart
 ---------------------
